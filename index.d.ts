@@ -458,169 +458,73 @@ export const ephemeris: {
 
 export function calc(options: any, callback: any): any;
 
-export function swe_azalt(): any;
-
-export function swe_azalt_rev(): any;
-
-export function swe_calc(): any;
-
-export function swe_calc_ut(): any;
-
-export function swe_close(): any;
-
-export function swe_cotrans(): any;
-
-export function swe_cotrans_sp(): any;
-
-export function swe_cs2degstr(): any;
-
-export function swe_cs2lonlatstr(): any;
-
-export function swe_cs2timestr(): any;
-
-export function swe_csnorm(): any;
-
-export function swe_csroundsec(): any;
-
-export function swe_d2l(): any;
-
-export function swe_date_conversion(): any;
-
-export function swe_day_of_week(): any;
-
-export function swe_deg_midp(): any;
-
-export function swe_degnorm(): any;
-
-export function swe_deltat(): any;
-
-export function swe_difcs2n(): any;
-
-export function swe_difcsn(): any;
-
-export function swe_difdeg2n(): any;
-
-export function swe_difdegn(): any;
-
-export function swe_difrad2n(): any;
-
-export function swe_fixstar(): any;
-
-export function swe_fixstar2(): any;
-
-export function swe_fixstar2_mag(): any;
-
-export function swe_fixstar2_ut(): any;
-
-export function swe_fixstar_mag(): any;
-
-export function swe_fixstar_ut(): any;
-
-export function swe_gauquelin_sector(): any;
-
-export function swe_get_ayanamsa(): any;
-
-export function swe_get_ayanamsa_ex(): any;
-
-export function swe_get_ayanamsa_ex_ut(): any;
-
-export function swe_get_ayanamsa_name(): any;
-
-export function swe_get_ayanamsa_ut(): any;
-
-export function swe_get_orbital_elements(): any;
-
-export function swe_get_planet_name(): any;
-
-export function swe_get_tid_acc(): any;
-
-export function swe_heliacal_pheno_ut(): any;
-
-export function swe_heliacal_ut(): any;
-
-export function swe_houses(): any;
-
-export function swe_houses_armc(): any;
-
-export function swe_houses_ex(): any;
-
-export function swe_houses_pos(): any;
-
-export function swe_jdet_to_utc(): any;
-
-export function swe_jdut1_to_utc(): any;
-
-export function swe_julday(): any;
-
-export function swe_lun_eclipse_how(): any;
-
-export function swe_lun_eclipse_when(): any;
-
-export function swe_lun_eclipse_when_loc(): any;
-
-export function swe_lun_occult_when_glob(): any;
-
-export function swe_lun_occult_when_loc(): any;
-
-export function swe_lun_occult_where(): any;
-
-export function swe_nod_aps(): any;
-
-export function swe_nod_aps_ut(): any;
-
-export function swe_orbit_max_min_true_distance(): any;
-
-export function swe_pheno(): any;
-
-export function swe_pheno_ut(): any;
-
-export function swe_rad_midp(): any;
-
-export function swe_radnorm(): any;
-
-export function swe_refrac(): any;
-
-export function swe_refrac_extended(): any;
-
-export function swe_revjul(): any;
-
-export function swe_rise_trans(): any;
-
-export function swe_rise_trans_true_hor(): any;
-
-export function swe_set_ephe_path(): any;
-
-export function swe_set_jpl_file(): any;
-
-export function swe_set_lapse_rate(): any;
-
-export function swe_set_sid_mode(): any;
-
-export function swe_set_tid_acc(): any;
-
-export function swe_set_topo(): any;
-
-export function swe_sidtime(): any;
-
-export function swe_sidtime0(): any;
-
-export function swe_sol_eclipse_how(): any;
-
-export function swe_sol_eclipse_when_glob(): any;
-
-export function swe_sol_eclipse_when_loc(): any;
-
-export function swe_sol_eclipse_where(): any;
-
-export function swe_split_deg(): any;
-
-export function swe_time_equ(): any;
-
-export function swe_utc_time_zone(): any;
-
-export function swe_utc_to_jd(): any;
-
-export function swe_version(): any;
-
-export function swe_vis_limit_mag(): any;
-
+export function swe_calc_ut(tjd_ut: number, ipl: number, iflag: number, xx: number, serr: string): number;
+export function swe_date_conversion(y: number, m: number, d: number,hour: number,c: string,tjd: number): number;
+export function swe_azalt_rev(tjd_ut: number,calc_flag: number,geopos: number,xin: number,xout: number): void;
+export function swe_azalt(tjd_ut: number,calc_flag: number,geopos: number,atpress: number,attemp: number,xin: number,xaz: number): void;
+export function swe_calc(tjd_et: number, ipl: number, iflag: number, xx: number, serr: string): number;
+export function swe_close(): void;
+export function swe_cotrans_sp(xpo: number,xpn: number,eps: number): void;
+export function swe_cotrans(xpo: number,xpn: number,eps: number): void;
+export function swe_cs2degstr(t: number, a: string): string;
+export function swe_cs2lonlatstr(t: number, pchar: string, mchar: string, s: string): string;
+export function swe_cs2timestr(t: number, sep: number, suppressZero: boolean, a: string): string;
+export function swe_csroundsec(x: number): number;
+export function swe_d2l(x: number): number;
+export function swe_day_of_week(jd: number): number;
+export function swe_degnorm(x: number): number;
+export function swe_deltat_ex(tjd: number,ephe_flag: number,serr: string): number;
+export function swe_deltat(tjd: number): number;
+export function swe_difcs2n(p1: number, p2: number): number;
+export function swe_difcsn(p1: number, p2: number): number;
+export function swe_difdeg2n(p1: number, p2: number): number;
+export function swe_difdegn(p1: number, p2: number): number;
+export function swe_fixstar_ut(star: string, tjd_ut: number, iflag: number, xx: number, serr: string): number;
+export function swe_fixstar(star: string, tjd_et: number, iflag: number, xx: number, serr: string): number;
+export function swe_gauquelin_sector(tjd_ut: number,ipl: number,starname: string,iflag: number,imeth: number,geopos: number,atpress: number, attemp: number,dgsect: number,serr: string): number;
+export function swe_get_ayanamsa_ex_ut(tjd_ut: number, ephe_flag: number, daya: number, serr: string): number;
+export function swe_get_ayanamsa_ex(tjd_ut: number, ephe_flag: number, daya: number, serr: string): number;
+export function swe_get_ayanamsa_ut(tjd_ut: number): number;
+export function swe_get_ayanamsa(tjd_et: number): number;
+export function swe_get_library_path(spath: string): string;
+export function swe_get_planet_name(ipl: number,plan_name: string): string;
+export function swe_get_tid_acc(): number;
+export function swe_house_name(hsys: number): string;
+export function swe_house_pos(armc: number,geolat: number,eps: number,hsys: number,xpin: number,serr: string): number;
+export function swe_houses_armc(armc: number,geolat: number,eps: number,hsys: number,cusps: number,ascmc: number): number;
+export function swe_houses_ex(tjd_ut: number,iflag: number,geolat: number,geolon: number,hsys: number,cusps: number,ascmc: number): number;
+export function swe_houses(tjd_ut: number,geolat: number,geolon: number,hsys: number,cusps: number,ascmc: number): number;
+export function swe_jdet_to_utc(tjd_et: number,gregflag: number, iyear: number, imonth: number, iday: number,ihour: number, imin: number, dsec: number): void;
+export function swe_jdut1_to_utc(tjd_ut: number,gregflag: number, iyear: number, imonth: number, iday: number,ihour: number, imin: number, dsec: number): void;
+export function swe_julday(year: number,month: number,day: number,hour: number,gregflag: number) : number;
+export function swe_lat_to_lmt(tjd_lat: number,geolon: number,tjd_lmt: number,serr: string): number;
+export function swe_lmt_to_lat(tjd_lmt: number,geolon: number,tjd_lat: number,serr: string): number;
+export function swe_lun_eclipse_how(tjd_ut: number,ifl: number,geopos: number, attr: number,serr: string): number;
+export function swe_lun_eclipse_when_loc(tjd_start: number,ifl: number,geopos: number,tret: number,attr: number, backward: boolean,serr: string): number;
+export function swe_lun_eclipse_when(tjd_start: number,ifl: number,ifltype: number,tret: number,backward: boolean,serr: string): number;
+export function swe_lun_occult_when_glob(tjd_start: number, ipl: number, starname: string, ifl: number, ifltype: number, tret: number, backward: boolean, serr: string): number;
+export function swe_lun_occult_when_loc(tjd_start: number, ipl: number, starname: string, ifl: number, geopos: number, tret: number, attr: number, backward: boolean, serr: string): number;
+export function swe_lun_occult_where(tjd_ut: number, ipl: number, starname: string, ifl: number, geopos: number, attr: number, serr: string): number;
+export function swe_pheno_ut(tjd_ut: number,ipl: number,iflag: number,attr: number,serr: string): number;
+export function swe_pheno(tjd_et: number,ipl: number,iflag: number,attr: number,serr: string): number;
+export function swe_radnorm(x: number): number;
+export function swe_refrac(inalt: number,atpress: number,attemp: number, calc_flag: number): number;
+export function swe_revjul(tjd: number,gregflag: number,year: number,month: number,day: number,hour: number): void;
+export function swe_rise_trans_true_hor(tjd_ut: number,ipl: number,starname: string,epheflag: number,rsmi: number,geopos: number,atpress: number,attemp: number,horhgt: number,tret: number,serr: string): number;
+export function swe_rise_trans(tjd_ut: number,ipl: number,starname: string,epheflag: number,rsmi: number,geopos: number,atpress: number,attemp: number,tret: number,serr: string): number;
+export function swe_set_ephe_path(path: string): void;
+export function swe_set_jpl_file(fname: string): void;
+export function swe_set_sid_mode(sid_mode: number,t0: number, ayan_t0: number): void;
+export function swe_set_tid_acc(t_acc: number): void;
+export function swe_set_topo(geolon: number, geolat: number, altitude: number): void;
+export function swe_sidtime(tjd_ut: number): number;
+export function swe_sidtime0(tjd_ut: number,eps: number,nut: number): number;
+export function swe_sol_eclipse_how(tjd_ut: number, ifl: number, geopos: number, attr: number, serr: string): number;
+export function swe_sol_eclipse_when_glob(tjd_start: number, ifl: number, ifltype: number, tret: number, backward: boolean, serr: string): number;
+export function swe_sol_eclipse_when_loc(tjd_start: number, ifl: number, geopos: number, tret: number, attr: number, backward: boolean, serr: string): number;
+export function swe_sol_eclipse_where(tjd_ut: number, ifl: number, geopos: number, attr: number, serr: string): number;
+export function swe_split_deg(ddeg: number,roundflag: number,ideg: number,imin: number,isec: number,dsecfr: number,isgn: number): number;
+export function swe_time_equ(tjd_et: number,e: number,serr: string): number;
+export function swe_utc_timezone(iyear: number, imonth: number, iday: number,ihour: number, imin: number, dsec: number,d_timezone: number,iyear_out: number, imonth_out: number, iday_out: number,ihour_out: number, imin_out: number, dsec_out: number): void;
+export function swe_utc_to_jd(iyear: number, imonth: number, iday: number,ihour: number, imin: number, dsec: number,gregflag: number, dret: number[], serr: string): void;
+export function swe_version(svers: string): string;
