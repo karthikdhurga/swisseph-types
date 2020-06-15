@@ -1,5 +1,19 @@
 {
-    "private": true,
-	"name": "@types/swisseph"
-    "dependencies": {}
+  "name": "@types/swisseph",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/karthikdhurga/swisseph-types.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/karthikdhurga/swisseph-types/issues"
+  },
+  "homepage": "https://github.com/karthikdhurga/swisseph-types#readme"
 }
